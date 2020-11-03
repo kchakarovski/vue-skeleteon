@@ -1,14 +1,24 @@
 <template>
-  <div class="home">
-    <!-- topcard.vue -->
-    <!-- wrapper.vue -->
-    <!-- lastcard.vue -->
+  <div id="home">
+    <topcard />
+    <wrapper />
+    <lastcard />
   </div>
 </template>
 
 <script>
+import Topcard from "../components/Topcard";
+import Wrapper from "../components/Wrapper";
+import Lastcard from "../components/Lastcard";
 export default {
   name: "Home",
-  components: {}
+  components: {
+    Topcard,
+    Wrapper,
+    Lastcard
+  },
+  data() {
+    return {};
+  }
 };
 </script>
