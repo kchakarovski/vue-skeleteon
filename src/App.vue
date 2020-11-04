@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <Nav />
+    <navigation />
     <router-link to="/">APP</router-link> <br>
     <router-link to="/Home">Home</router-link>
     <router-view />
-    <Footer />
+    <appfooter />
   </div>
 </template>
 
 <script>
-import Nav from "../src/components/Nav";
-import Footer from "../src/components/Footer";
+import Navigation from "../src/components/Navigation";
+import Appfooter from "../src/components/App-footer";
 export default {
   name: "App",
   components: {
-    Nav,
-    Footer
+    Navigation,
+    Appfooter
   },
   data() {
     return {};

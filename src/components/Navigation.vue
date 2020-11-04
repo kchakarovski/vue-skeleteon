@@ -1,13 +1,12 @@
 <template>
-  <div id="footer">
-      <h1>Footer COMP</h1>
+  <div id="nav">
+      <h1>Nav COMP</h1>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Footer",
-
+    name: "Navigation",
     data(){
         return{
 
