@@ -4,7 +4,7 @@
     <router-link to="/">APP</router-link> <br>
     <router-link to="/Home">Home</router-link>
     <router-view />
-    <appfooter />
+    <app-footer />
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   name: "App",
   components: {
     Navigation,
-    Appfooter
+    "app-footer": Appfooter
   },
   data() {
     return {};
