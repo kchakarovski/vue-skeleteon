@@ -1,0 +1,8 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+    &__item {
+        display: flex;
+    }
+}
