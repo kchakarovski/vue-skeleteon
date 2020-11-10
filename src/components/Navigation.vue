@@ -2,13 +2,13 @@
   <div class="nav">
       <div class="nav__item" v-for="(value, key) in inputData" :key="key">
         <slot name="name">
-          <span class="nav__item--name" v-text="value.name" />
+          <div class="nav__item--name" v-text="value.name" />
         </slot>
         <slot name="link">
-          <router-link :to="value.link"><span class="nav__item--link" v-text="value.link"></span></router-link>
+          <router-link :to="value.link"><div class="nav__item--link" v-text="value.link" /></router-link>
         </slot>
         <slot name="tooltip">
-          <span class="nav__item--tooltip" v-text="value.tooltip" />
+          <div class="nav__item--tooltip" v-text="value.tooltip" />
         </slot>
       </div>
   </div>

@@ -1,8 +1,39 @@
 .nav {
     display: flex;
-    justify-content: center;
     background: #333;
+
     &__item {
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+
+        // &:hover{
+        //     background: #666;
+        // }
+        &--name {
+            transition: 0.7s ease-in-out;
+
+            &:hover {
+                background: #666;
+            }
+        }
+
+        &--link {
+            transition: 0.7s ease-in-out;
+
+            &:hover {
+                background: #666;
+            }
+        }
+
+        &--tooltip {
+            transition: 0.7s ease-in-out;
+
+            &:hover {
+                background: #666;
+            }
+        }
     }
 }
