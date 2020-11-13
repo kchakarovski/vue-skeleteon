@@ -4,8 +4,8 @@
         <slot name="name">
           <div class="nav__item--name" v-text="value.name" />
         </slot>
-        <slot name="link">
-          <router-link :to="value.link"><div class="nav__item--link" v-text="value.link" /></router-link>
+        <slot name="href">
+          <router-link class="nav__item--href" :to="value.href"><div class="nav__item--href" v-text="value.href" /></router-link>
         </slot>
         <slot name="tooltip">
           <div class="nav__item--tooltip" v-text="value.tooltip" />
@@ -24,17 +24,17 @@ export default {
               return [
                 {
                   name: 'Lorem Ipsum',
-                  link: 'https://google.com',
+                  href: 'https://google.com',
                   tooltip: 'Some Tooltip'
               }
                 // {
                 //   name: 'Lorem Ipsum',
-                //   link: 'https://google.com',   
+                //   href: 'https://google.com',   
                 //   tooltip: 'Some Tooltip'
                 // },
                 // {
                 //   name: 'Lorem Ipsum',
-                //   link: 'https://google.com',   
+                //   href: 'https://google.com',   
                 //   tooltip: 'Some Tooltip'
                 // }
               ];
