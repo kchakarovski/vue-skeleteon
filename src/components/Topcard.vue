@@ -1,6 +1,14 @@
 <template>
   <div id="Topcard">
-    <h1>Topcard COMP</h1>
+    <slot name="title">
+      <h1 class="topcard__title" v-text="inputData.title" />
+    </slot>
+    <slot name="subtitle">
+      <div class="topcard__subtitle" v-text="inputData.subtitle" />
+    </slot>
+    <slot name="description">
+      <p class="topcard__description" v-html="inputData.description"></p>
+    </slot>
   </div>
 </template>
 
@@ -9,18 +17,18 @@ export default {
   name: "Topcard",
   props: {
     inputData: {
-      type: Object,
+      default: () => {
+        return {
+          title: "Lorem Ipsum",
+          subtitle: "Lorem ipsum sub",
+          description: "Some description",
+          img: "https://someimage.com"
+        };
+      },
     },
   },
   data() {
-    return {
-      topcardData: {
-        title: "Lorem Ipsum",
-        subtitle: "Lorem ipsum sub",
-        description: "Some description",
-        img: "https://someimage.com"
-      },
-    };
+    return {};
   },
 };
 </script>

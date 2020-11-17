@@ -1,6 +1,14 @@
 <template>
   <div id="nav">
-    <h1>Lastcard COMP</h1>
+    <slot name="title">
+      <h1 class="lastcard__title" v-text="inputData.title" />
+    </slot>
+    <slot name="subtitle">
+      <div class="lastcard__subtitle" v-text="inputData.subtitle" />
+    </slot>
+    <slot name="description">
+      <p class="lastcard__description" v-html="inputData.description"></p>
+    </slot>
   </div>
 </template>
 
