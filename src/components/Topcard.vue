@@ -8,18 +8,18 @@
 export default {
   name: "Topcard",
   props: {
-      inputData: {
-          type: Object,
-      }
+    inputData: {
+      type: Object,
+    },
   },
   data() {
     return {
-        topcardData: {
-            title:'Lorem Ipsum',
-            subtitle:'Lorem ipsum sub',
-            description:'Some description',
-            img:'https://someimage.com'
-        }
+      topcardData: {
+        title: "Lorem Ipsum",
+        subtitle: "Lorem ipsum sub",
+        description: "Some description",
+        img: "https://someimage.com"
+      },
     };
   },
 };
