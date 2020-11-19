@@ -2,9 +2,30 @@
   <div :id="inputData.id" class="wrapper">
     <div class="wrapper__header">
       <!--  Header of the wrapper => header title, header subtitle ... -->
-      <div class="wrapper__header--title" v-text="header_title" />
+      <div class="wrapper__header--title" v-text="inputData.header_title" />
+      <div
+        class="wrapper__header--subtitle"
+        v-text="inputData.header_subtitle"
+      />
+      <img
+        class="wrapper__header--img"
+        :src="inputData.header_img"
+        :alt="inputData.header_title"
+      />
+      <div
+        class="wrapper__header--description"
+        v-html="inputData.header_description"
+      />
+      <router-link
+        class="wrapper__header--btnlink"
+        :to="inputData.header_buttonLink"
+      >
+        <button
+          class="wrapper__header-btntext"
+          v-text="inputData.header_buttonText"
+        />
+      </router-link>
     </div>
-
     <div
       v-for="(value, key) in inputData.widgets"
       :key="key"
@@ -13,13 +34,19 @@
       <div class="wrapper__left">
         <div class="wrapper__item">
           <!--  Here comes Image  -->
+          <img class="wrapper__item--img" :src="value.img" :alt="value.title" />
         </div>
       </div>
 
       <div class="wrapper__right">
         <div class="wrapper__item">
-          <!-- <div class="wrapper__item--title" v-text="value.title" /> -->
-          <!--  Title, Subtitle, Description, ButtonText, ButtonLink -->
+          <div class="wrapper__item--title" v-text="value.title" />
+          <div class="wrapper__item--subtitle" v-text="value.subtitle" />
+          <div class="wrapper__item--description" v-html="value.description" />
+          <router-link :to="value.buttonLink" class="wrapper__item--btnlink">
+            <button class="wrapper__item--btn" v-text="value.buttonText" />
+            <!-- div or span for the buttontext? -->
+          </router-link>
         </div>
       </div>
     </div>
@@ -48,7 +75,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -56,7 +83,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -64,7 +91,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -72,7 +99,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -80,7 +107,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -88,7 +115,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -96,13 +123,13 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
-            }
-          ]
+              buttonLink: "/some-awesome-description",
+            },
+          ],
         };
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 

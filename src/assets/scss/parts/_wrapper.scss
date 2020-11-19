@@ -1,5 +1,46 @@
 .wrapper {
-    &__header {}
+    &__header {
+        &--title {
+            color: orangered;
+        }
 
-    &__container {}
+        &--subtitle {
+            color: darkgreen;
+        }
+
+        &--img {}
+
+        &--description {
+            color: lightseagreen;
+        }
+
+        &--btnlink {}
+
+        &--btntext {}
+    }
+
+    &__container {
+        &__left {
+            &__item {
+                &--img {}
+            }
+        }
+
+        &__right {
+            &__item {
+                &--title {}
+
+                &--subtitle {}
+
+                &--description {}
+
+                &--btnlink {}
+
+                &--btn {}
+            }
+        }
+
+        &__item {}
+
+    }
 }

@@ -1,0 +1,9 @@
+.wrapper__header--title {
+  color: orangered;
+}
+.wrapper__header--subtitle {
+  color: darkgreen;
+}
+.wrapper__header--description {
+  color: lightseagreen;
+}
