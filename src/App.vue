@@ -15,11 +15,11 @@ export default {
   name: "App",
   components: {
     Navigation,
-    "app-footer": Appfooter,
+    "app-footer": Appfooter
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 <style lang="scss">
