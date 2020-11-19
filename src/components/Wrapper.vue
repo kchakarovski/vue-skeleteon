@@ -1,5 +1,5 @@
 <template>
-  <div id="Wrapper">
+  <div id="wrapper">
       <h1>Wrapper COMP</h1>
   </div>
 </template>

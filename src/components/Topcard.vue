@@ -1,5 +1,8 @@
 <template>
-  <div id="Topcard">
+  <div id="topcard">
+    <slot name="img">
+      <img :src="inputData.img" :alt="inputData.title">
+    </slot>
     <slot name="title">
       <h1 class="topcard__title" v-text="inputData.title" />
     </slot>
