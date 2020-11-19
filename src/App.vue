@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navigation/>
+    <navigation />
     <router-link to="/">APP</router-link> <br />
     <router-link to="/Home">Home</router-link>
     <router-view />
@@ -15,11 +15,11 @@ export default {
   name: "App",
   components: {
     Navigation,
-    "app-footer": Appfooter
+    "app-footer": Appfooter,
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss">

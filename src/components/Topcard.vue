@@ -1,20 +1,40 @@
 <template>
-  <div id="Topcard">
-      <h1>Topcard COMP</h1>
+  <div id="topcard">
+    <slot name="img">
+      <img :src="inputData.img" :alt="inputData.title">
+    </slot>
+    <slot name="title">
+      <h1 class="topcard__title" v-text="inputData.title" />
+    </slot>
+    <slot name="subtitle">
+      <div class="topcard__subtitle" v-text="inputData.subtitle" />
+    </slot>
+    <slot name="description">
+      <p class="topcard__description" v-html="inputData.description"></p>
+    </slot>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Topcard",
-    data(){
-        return{
-
-        }
+  name: "Topcard",
+  props: {
+    inputData: {
+      default: () => {
+        return {
+          title: "Lorem Ipsum",
+          subtitle: "Lorem ipsum sub",
+          description: "Some description",
+          img: "https://someimage.com"
+        };
+      },
     },
-}
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style>
-
 </style>
