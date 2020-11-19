@@ -1,21 +1,17 @@
 <template>
   <div id="footer">
-      <h1>Footer COMP</h1>
+    <h1>Footer COMP</h1>
   </div>
 </template>
 
 <script>
 export default {
-    name: "App-footer",
+  name: "App-footer",
 
-    data(){
-        return{
-
-        }
-    },
-}
+  data() {
+    return {};
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

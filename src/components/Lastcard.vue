@@ -1,7 +1,7 @@
 <template>
   <div id="lastcard">
     <slot name="img">
-      <img :src="inputData.img" :alt="inputData.title">
+      <img :src="inputData.img" :alt="inputData.title" />
     </slot>
     <slot name="title">
       <h1 class="lastcard__title" v-text="inputData.title" />
@@ -27,14 +27,13 @@ export default {
           description: "Some description",
           img: "https://someimage.com"
         };
-      },
-    },
+      }
+    }
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>
