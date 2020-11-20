@@ -75,7 +75,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -83,7 +83,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -91,7 +91,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -99,7 +99,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -107,7 +107,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -115,7 +115,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
+              buttonLink: "/some-awesome-description"
             },
             {
               title: "Title",
@@ -123,13 +123,13 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description",
-            },
-          ],
+              buttonLink: "/some-awesome-description"
+            }
+          ]
         };
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 
