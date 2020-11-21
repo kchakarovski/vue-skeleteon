@@ -28,19 +28,22 @@
 
         &__right {
             &__item {
-                &--title {}
+                &--title {
+                    color: orange;
+                }
 
-                &--subtitle {}
+                &--subtitle {
+                    color: red;
+                }
 
-                &--description {}
+                &--description {
+                    color: green;
+                }
 
                 &--btnlink {}
 
                 &--btn {}
             }
         }
-
-        &__item {}
-
     }
 }

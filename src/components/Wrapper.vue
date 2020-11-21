@@ -21,7 +21,7 @@
         :to="inputData.header_buttonLink"
       >
         <button
-          class="wrapper__header-btntext"
+          class="wrapper__header--btntext"
           v-text="inputData.header_buttonText"
         />
       </router-link>
@@ -31,20 +31,39 @@
       :key="key"
       class="wrapper__container"
     >
-      <div class="wrapper__left">
-        <div class="wrapper__item">
+      <div class="wrapper__container__left">
+        <div class="wrapper__container__left__item">
           <!--  Here comes Image  -->
-          <img class="wrapper__item--img" :src="value.img" :alt="value.title" />
+          <img
+            class="wrapper__container__left__item--img"
+            :src="value.img"
+            :alt="value.title"
+          />
         </div>
       </div>
 
-      <div class="wrapper__right">
-        <div class="wrapper__item">
-          <div class="wrapper__item--title" v-text="value.title" />
-          <div class="wrapper__item--subtitle" v-text="value.subtitle" />
-          <div class="wrapper__item--description" v-html="value.description" />
-          <router-link :to="value.buttonLink" class="wrapper__item--btnlink">
-            <button class="wrapper__item--btn" v-text="value.buttonText" />
+      <div class="wrapper__container__right">
+        <div class="wrapper__container__right__item">
+          <div
+            class="wrapper__container__right__item--title"
+            v-text="value.title"
+          />
+          <div
+            class="wrapper__container__right__item--subtitle"
+            v-text="value.subtitle"
+          />
+          <div
+            class="wrapper__container__right__item--description"
+            v-html="value.description"
+          />
+          <router-link
+            :to="value.buttonLink"
+            class="wrapper__container__right__item--btnlink"
+          >
+            <button
+              class="wrapper__container__right__item--btn"
+              v-text="value.buttonText"
+            />
             <!-- div or span for the buttontext? -->
           </router-link>
         </div>

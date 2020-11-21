@@ -7,3 +7,12 @@
 .wrapper__header--description {
   color: lightseagreen;
 }
+.wrapper__container__right__item--title {
+  color: orange;
+}
+.wrapper__container__right__item--subtitle {
+  color: red;
+}
+.wrapper__container__right__item--description {
+  color: green;
+}
