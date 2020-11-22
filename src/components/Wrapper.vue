@@ -56,16 +56,17 @@
             class="wrapper__container__right__item--description"
             v-html="value.description"
           />
-          <router-link
+          <!-- <router-link
             :to="value.buttonLink"
             class="wrapper__container__right__item--btnlink"
-          >
+          > -->
             <button
               class="wrapper__container__right__item--btn"
+              @click="toggle(inputData.buttonLink)"
               v-text="value.buttonText"
             />
-            <!-- div or span for the buttontext? -->
-          </router-link>
+            <!-- div or span for the buttontext? router link or function for the link on the button? -->
+          <!-- </router-link> -->
         </div>
       </div>
     </div>
@@ -147,6 +148,11 @@ export default {
           ]
         };
       }
+    }
+  },
+  methods: {
+    toggle(buttonLink) {
+      this.$emit("clickedButton", buttonLink);
     }
   }
 };
