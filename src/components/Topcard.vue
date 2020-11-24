@@ -1,5 +1,5 @@
 <template>
-  <div id="topcard">
+  <div class="topcard">
     <slot name="img">
       <img :src="inputData.img" :alt="inputData.title" />
     </slot>

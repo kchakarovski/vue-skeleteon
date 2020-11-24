@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="nav">
     <div class="nav__item" v-for="(value, key) in inputData" :key="key">
       <slot name="name">
         <div class="nav__item--name" v-text="value.name" />

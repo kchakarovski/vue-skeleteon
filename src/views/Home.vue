@@ -19,6 +19,11 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    redirect(buttonLink) {
+      this.$router.push(buttonLink);
+    }
   }
 };
 </script>

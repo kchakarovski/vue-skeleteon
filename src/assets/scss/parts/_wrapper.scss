@@ -1,5 +1,45 @@
 .wrapper {
-    &__header {}
+  &__header {
+    &--title {
+      color: orangered;
+    }
 
-    &__container {}
+    &--subtitle {
+      color: darkgreen;
+    }
+
+    &--img {}
+
+    &--description {
+      color: lightseagreen;
+    }
+
+    &--btn {}
+  }
+
+  &__container {
+    &--left {
+      .item {
+        &--img {}
+      }
+    }
+
+    &--right {
+      .item {
+        &--title {
+          color: orange;
+        }
+
+        &--subtitle {
+          color: orange;
+        }
+
+        &--description {
+          color: green;
+        }
+
+        &--btn {}
+      }
+    }
+  }
 }
