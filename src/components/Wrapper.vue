@@ -1,65 +1,62 @@
 <template>
   <div :id="inputData.id" class="wrapper">
-    <div class="wrapper__header">
-      <!--  Header of the wrapper => header title, header subtitle ... -->
-      <div class="wrapper__header--title" v-text="inputData.header_title" />
-      <div
-        class="wrapper__header--subtitle"
-        v-text="inputData.header_subtitle"
-      />
-      <div class="wrapper__header--img">
-        <img
-          :src="inputData.header_img"
-          :alt="inputData.header_title"
+    <!-- <div class="wrapper__header">
+      <slot name="title">
+        <div class="wrapper__header--title" v-text="inputData.header_title" />
+      </slot>
+      <slot name="subtitle">
+        <div
+          class="wrapper__header--subtitle"
+          v-text="inputData.header_subtitle"
         />
-      </div>
-      <div
-        class="wrapper__header--description"
-        v-html="inputData.header_description"
-      />
-      <button
-        class="wrapper__header--btn"
-        @click="toggleFromHeader(inputData.header_buttonLink)"
-        v-text="inputData.header_buttonText"
-      />
-    </div>
+      </slot>
+      <slot name="image">
+        <div class="wrapper__header--img">
+          <img :src="inputData.header_img" :alt="inputData.header_title" />
+        </div>
+      </slot>
+      <slot name="description">
+        <div
+          class="wrapper__header--description"
+          v-html="inputData.header_description"
+        />
+      </slot>
+      <slot name="button">
+        <button
+          class="wrapper__header--btn"
+          @click="toggleFromHeader(inputData.header_buttonLink)"
+          v-text="inputData.header_buttonText"
+        />
+      </slot>
+    </div> -->
     <div
       v-for="(value, key) in inputData.widgets"
       :key="key"
       class="wrapper__container"
     >
       <div class="wrapper__container--left">
-        <!--  Here comes Item Component, Komentiranoto e stariot kod  -->
-
-        
-        <!-- <div class="item">
-          <div class="item--img">
-            <img :src="value.img" :alt="value.title" />
-          </div>
-        </div> -->
+        <item>
+          <template v-slot:title>
+            <span v-if="hide" />
+          </template>
+          <template v-slot:subtitle>
+            <span v-if="hide" />
+          </template>
+          <template v-slot:description>
+            <span v-show="hide" />
+          </template>
+          <template v-slot:button>
+            <span v-show="hide" />
+          </template>
+        </item>
       </div>
 
       <div class="wrapper__container--right">
-        <item 
-          :inputData="value" 
-          @clickedButton="toggleFromContainer"
-        >
-          <!-- <template v-slot:image>
-            <span></span>
-          </template> -->
+        <item @clickedButton="toggleFromContainer">
+          <template v-slot:image>
+            <span v-show="hide" />
+          </template>
         </item>
-
-         <!--  Star kod za brisenje  -->
-        <!-- <div class="item">
-          <div class="item--title" v-text="value.title" />
-          <div class="item--subtitle" v-text="value.subtitle" />
-          <div class="item--description" v-html="value.description" />
-          <button
-            class="item--btn"
-            @click="toggleFromContainer(inputData.buttonLink)"
-            v-text="value.buttonText"
-          /> -->
-        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -71,7 +68,12 @@ import Item from "../components/Item";
 export default {
   name: "Wrapper",
   components: {
-    Item
+    Item,
+  },
+  data() {
+    return {
+      hide: true
+    };
   },
   props: {
     inputData: {
@@ -87,7 +89,7 @@ export default {
           header_buttonLink: "/about",
           widgets: [
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -95,7 +97,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -103,7 +105,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -111,7 +113,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -119,7 +121,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -127,7 +129,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -135,7 +137,7 @@ export default {
               buttonLink: "/some-awesome-description",
             },
             {
-              title: "Title",
+              title: "Titlew",
               subtitle: "Subtitle",
               img: "https://someimage.com",
               description: "Some description",
@@ -151,9 +153,9 @@ export default {
     toggleFromHeader(buttonLink) {
       this.$emit("clickedHeaderButton", buttonLink);
     },
-    toggleFromContainer(buttonLink){
+    toggleFromContainer(buttonLink) {
       this.$emit("clickedContainerButton", buttonLink);
-    }
+    },
   },
 };
 </script>

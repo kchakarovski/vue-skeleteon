@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <topcard />
+    <!-- <topcard /> -->
     <wrapper 
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import Topcard from "../components/Topcard";
+// import Topcard from "../components/Topcard";
 import Wrapper from "../components/Wrapper";
 import Lastcard from "../components/Lastcard";
 export default {
   name: "Home",
   components: {
-    Topcard,
+    // Topcard,
     Wrapper,
     Lastcard
   },
@@ -24,9 +24,6 @@ export default {
     return {};
   },
   methods: {
-    redirect(buttonLink) {
-      this.$router.push(buttonLink);
-    },
     navigate(url) {
       this.$router.push(url);
     }
