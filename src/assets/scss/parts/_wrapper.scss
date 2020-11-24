@@ -1,49 +1,45 @@
 .wrapper {
-    &__header {
+  &__header {
+    &--title {
+      color: orangered;
+    }
+
+    &--subtitle {
+      color: darkgreen;
+    }
+
+    &--img {}
+
+    &--description {
+      color: lightseagreen;
+    }
+
+    &--btn {}
+  }
+
+  &__container {
+    &--left {
+      .item {
+        &--img {}
+      }
+    }
+
+    &--right {
+      .item {
         &--title {
-            color: orangered;
+          color: orange;
         }
 
         &--subtitle {
-            color: darkgreen;
+          color: orange;
         }
-
-        &--img {}
 
         &--description {
-            color: lightseagreen;
+          color: green;
         }
 
-        &--btnlink {}
-
-        &--btntext {}
+        &--btn {}
+      }
     }
-
-    &__container {
-        &__left {
-            &__item {
-                &--img {}
-            }
-        }
-
-        &__right {
-            &__item {
-                &--title {
-                    color: orange;
-                }
-
-                &--subtitle {
-                    color: red;
-                }
-
-                &--description {
-                    color: green;
-                }
-
-                &--btnlink {}
-
-                &--btn {}
-            }
-        }
-    }
+  }
 }

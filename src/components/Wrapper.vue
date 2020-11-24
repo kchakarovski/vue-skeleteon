@@ -16,57 +16,34 @@
         class="wrapper__header--description"
         v-html="inputData.header_description"
       />
-      <router-link
-        class="wrapper__header--btnlink"
-        :to="inputData.header_buttonLink"
-      >
-        <button
-          class="wrapper__header--btntext"
-          v-text="inputData.header_buttonText"
-        />
-      </router-link>
+      <button
+        class="wrapper__header--btn"
+        @click="toggle(inputData.buttonLink)"
+        v-text="inputData.header_buttonText"
+      />
     </div>
     <div
       v-for="(value, key) in inputData.widgets"
       :key="key"
       class="wrapper__container"
     >
-      <div class="wrapper__container__left">
-        <div class="wrapper__container__left__item">
+      <div class="wrapper__container--left">
+        <div class="item">
           <!--  Here comes Image  -->
-          <img
-            class="wrapper__container__left__item--img"
-            :src="value.img"
-            :alt="value.title"
-          />
+          <img class="item--img" :src="value.img" :alt="value.title" />
         </div>
       </div>
 
-      <div class="wrapper__container__right">
-        <div class="wrapper__container__right__item">
-          <div
-            class="wrapper__container__right__item--title"
-            v-text="value.title"
+      <div class="wrapper__container--right">
+        <div class="item">
+          <div class="item--title" v-text="value.title" />
+          <div class="item--subtitle" v-text="value.subtitle" />
+          <div class="item--description" v-html="value.description" />
+          <button
+            class="item--btn"
+            @click="toggle(inputData.buttonLink)"
+            v-text="value.buttonText"
           />
-          <div
-            class="wrapper__container__right__item--subtitle"
-            v-text="value.subtitle"
-          />
-          <div
-            class="wrapper__container__right__item--description"
-            v-html="value.description"
-          />
-          <!-- <router-link
-            :to="value.buttonLink"
-            class="wrapper__container__right__item--btnlink"
-          > -->
-            <button
-              class="wrapper__container__right__item--btn"
-              @click="toggle(inputData.buttonLink)"
-              v-text="value.buttonText"
-            />
-            <!-- div or span for the buttontext? router link or function for the link on the button? -->
-          <!-- </router-link> -->
         </div>
       </div>
     </div>
@@ -95,7 +72,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -103,7 +80,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -111,7 +88,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -119,7 +96,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -127,7 +104,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -135,7 +112,7 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
+              buttonLink: "/some-awesome-description",
             },
             {
               title: "Title",
@@ -143,18 +120,18 @@ export default {
               img: "https://someimage.com",
               description: "Some description",
               buttonText: "Some Text",
-              buttonLink: "/some-awesome-description"
-            }
-          ]
+              buttonLink: "/some-awesome-description",
+            },
+          ],
         };
-      }
-    }
+      },
+    },
   },
   methods: {
     toggle(buttonLink) {
       this.$emit("clickedButton", buttonLink);
-    }
-  }
+    },
+  },
 };
 </script>
 
