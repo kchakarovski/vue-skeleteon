@@ -1,35 +1,23 @@
 <template>
   <div id="home">
     <topcard />
-    <wrapper 
-      @clickedContainerButton="navigate"
-      @clickedHeaderButton="navigate"
-    />
+    <h1>Hello from About Page</h1>
     <lastcard />
   </div>
 </template>
 
 <script>
 import Topcard from "../components/Topcard";
-import Wrapper from "../components/Wrapper";
 import Lastcard from "../components/Lastcard";
 export default {
   name: "Home",
   components: {
     Topcard,
-    Wrapper,
     Lastcard
   },
   data() {
     return {};
   },
-  methods: {
-    redirect(buttonLink) {
-      this.$router.push(buttonLink);
-    },
-    navigate(url) {
-      this.$router.push(url);
-    }
-  }
+  methods: {}
 };
 </script>

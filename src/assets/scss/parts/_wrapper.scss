@@ -19,27 +19,11 @@
 
   &__container {
     &--left {
-      .item {
-        &--img {}
-      }
+      
     }
 
     &--right {
-      .item {
-        &--title {
-          color: orange;
-        }
-
-        &--subtitle {
-          color: orange;
-        }
-
-        &--description {
-          color: green;
-        }
-
-        &--btn {}
-      }
+      
     }
   }
 }
