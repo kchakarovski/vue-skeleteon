@@ -1,34 +1,10 @@
 <template>
   <div :id="inputData.id" class="wrapper">
-    <!-- <div class="wrapper__header">
-      <slot name="title">
-        <div class="wrapper__header--title" v-text="inputData.header_title" />
-      </slot>
-      <slot name="subtitle">
-        <div
-          class="wrapper__header--subtitle"
-          v-text="inputData.header_subtitle"
-        />
-      </slot>
-      <slot name="image">
-        <div class="wrapper__header--img">
-          <img :src="inputData.header_img" :alt="inputData.header_title" />
-        </div>
-      </slot>
-      <slot name="description">
-        <div
-          class="wrapper__header--description"
-          v-html="inputData.header_description"
-        />
-      </slot>
-      <slot name="button">
-        <button
-          class="wrapper__header--btn"
-          @click="toggleFromHeader(inputData.header_buttonLink)"
-          v-text="inputData.header_buttonText"
-        />
-      </slot>
-    </div> -->
+    <!-- Wrapper Header -->
+    <div v-for="(value, key) in inputData" :key="key">
+      <wrapperheader @clickedButton="toggleFromHeader" />
+    </div>
+    <!-- Item Component -->
     <div
       v-for="(value, key) in inputData.widgets"
       :key="key"
@@ -50,7 +26,6 @@
           </template>
         </item>
       </div>
-
       <div class="wrapper__container--right">
         <item @clickedButton="toggleFromContainer">
           <template v-slot:image>
@@ -64,11 +39,13 @@
 
 <script>
 import Item from "../components/Item";
+import Wrapperheader from "../components/Wrapperheader";
 
 export default {
   name: "Wrapper",
   components: {
     Item,
+    Wrapperheader
   },
   data() {
     return {
