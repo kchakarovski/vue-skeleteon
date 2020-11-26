@@ -1,0 +1,32 @@
+.wrapperheader{
+    .wrapper {
+        &__header {
+          &--title {
+            color: cyan;
+          }
+      
+          &--subtitle {
+            color: darkgreen;
+          }
+      
+          &--img {}
+      
+          &--description {
+            color: lightseagreen;
+          }
+      
+          &--btn {}
+        }
+      
+        &__container {
+          &--left {
+            
+          }
+      
+          &--right {
+            
+          }
+        }
+      }
+      
+}
