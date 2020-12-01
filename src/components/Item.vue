@@ -1,23 +1,24 @@
 <template>
   <div class="item">
     <slot name="title">
-    <div class="item--title" v-text="inputData.title" />
+    <div class="item--title" v-if="config.title" v-text="inputData.title" />
     </slot>
     <slot name="subtitle">
-    <div class="item--subtitle" v-text="inputData.subtitle" />
+    <div class="item--subtitle" v-if="config.subtitle" v-text="inputData.subtitle" />
     </slot>
     <slot name="description">
-    <div class="item--description" v-html="inputData.description" />
+    <div class="item--description" v-if="config.description" v-html="inputData.description" />
     </slot>
     <slot name="button">
     <button
       class="item--btn"
       @click="toggle(inputData.buttonLink)"
+      v-if="config.buttonLink"
       v-text="inputData.buttonText"
     />
     </slot>
     <slot name="image">
-      <div v-if="inputData.img" class="item--img">
+      <div v-if="config.img" class="item--img">
         <img :src="inputData.img" :alt="inputData.title" />
       </div>
     </slot>
@@ -45,6 +46,19 @@ export default {
         };
       },
     },
+    config: {
+      type: Object,
+      default: () => {
+        return {
+          title: true,
+          subtitle: true,
+          description: true,
+          buttonLink: true,
+          buttonText: true,
+          img: true
+        }
+      }
+    }
   },
   methods: {
     toggle(url) {

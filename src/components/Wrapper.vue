@@ -11,27 +11,10 @@
       class="wrapper__container"
     >
       <div class="wrapper__container--left">
-        <item>
-          <template v-slot:title>
-            <span v-if="hide" />
-          </template>
-          <template v-slot:subtitle>
-            <span v-if="hide" />
-          </template>
-          <template v-slot:description>
-            <span v-show="hide" />
-          </template>
-          <template v-slot:button>
-            <span v-show="hide" />
-          </template>
-        </item>
+        <item :config="configItemsA"> </item>
       </div>
       <div class="wrapper__container--right">
-        <item @clickedButton="toggleFromContainer">
-          <template v-slot:image>
-            <span v-show="hide" />
-          </template>
-        </item>
+        <item :config="configItemsB" @clickedButton="toggleFromContainer"> </item>
       </div>
     </div>
   </div>
@@ -45,11 +28,11 @@ export default {
   name: "Wrapper",
   components: {
     Item,
-    Wrapperheader
+    Wrapperheader,
   },
   data() {
     return {
-      hide: true
+      hide: true,
     };
   },
   props: {
@@ -122,6 +105,32 @@ export default {
               buttonLink: "/some-awesome-description",
             },
           ],
+        };
+      },
+    },
+    configItemsA: {
+      type: Object,
+      default: () => {
+        return {
+          title: false,
+          subtitle: false,
+          description: false,
+          buttonLink: false,
+          buttonText: false,
+          img: true,
+        };
+      },
+    },
+    configItemsB: {
+      type: Object,
+      default: () => {
+        return {
+          title: true,
+          subtitle: true,
+          description: true,
+          buttonLink: true,
+          buttonText: true,
+          img: false,
         };
       },
     },
