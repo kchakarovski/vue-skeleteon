@@ -1,6 +1,10 @@
 <template>
   <div class="header">
-    <navigation @clickedNavigation="clickedNavigation"/>
+    <navigation @clickedNavigation="clickedNavigation">
+      <template v-slot:tooltip>
+        <span />
+      </template>
+    </navigation>
   </div>
 </template>
 

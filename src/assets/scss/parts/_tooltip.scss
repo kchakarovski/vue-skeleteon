@@ -1,0 +1,27 @@
+.tooltip {
+  display: block;
+  opacity: 1;
+  transition: opacity .15s;
+  pointer-events: none;
+  padding: 4px;
+  z-index: 10000;
+  color: $white!important;
+  width: 500px;
+  background: $black;
+  padding: 20px;
+}
+
+.tooltip .tooltip-content {
+  background: black!important;
+  color: $white!important;
+  border-radius: 16px;
+  padding: 5px 10px 4px;
+}
+
+.tooltip.tooltip-open-transitionend {
+  display: block;
+}
+
+.tooltip.tooltip-after-open {
+  opacity: 1;
+}

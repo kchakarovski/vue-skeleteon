@@ -1,3 +1,7 @@
+@import './parts/colors';
+@import './parts/fonts';
+@import './parts/layout';
+
 @import './parts/app';
 @import './parts/nav';
 @import './parts/topcard';
@@ -7,3 +11,4 @@
 @import './parts/sections';
 @import './parts/item';
 @import './parts/wrapper-header';
+@import './parts/tooltip';

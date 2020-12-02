@@ -7,6 +7,7 @@
             class="href"
             @click="toggleNavigationItem(value.href)"
             v-text="value.name"
+            v-tooltip.bottom-center="value.tooltip"
           />
         </div>
       </slot>
