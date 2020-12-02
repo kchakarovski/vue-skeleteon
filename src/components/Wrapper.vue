@@ -2,7 +2,7 @@
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
     <div v-for="(value, key) in inputData" :key="key">
-      <wrapperheader @clickedButton="toggleFromHeader" />
+      <wrapper-header @clickedButton="toggleFromHeader" />
     </div>
     <!-- Item Component -->
     <div
@@ -22,13 +22,13 @@
 
 <script>
 import Item from "../components/Item";
-import Wrapperheader from "../components/Wrapperheader";
+import WrapperHeader from "../components/WrapperHeader";
 
 export default {
   name: "Wrapper",
   components: {
     Item,
-    Wrapperheader,
+    WrapperHeader,
   },
   data() {
     return {

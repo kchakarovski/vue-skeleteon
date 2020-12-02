@@ -2,12 +2,13 @@
   <div class="nav">
     <div class="nav__item" v-for="(value, key) in inputData" :key="key">
       <slot name="name">
-        <div class="nav__item--name" v-text="value.name" />
-      </slot>
-      <slot name="href">
-        <router-link class="nav__item--href" :to="value.href"
-          ><div class="nav__item--href" v-text="value.href"
-        /></router-link>
+        <div class="nav__item--name">
+          <a
+            class="href"
+            @click="toggleNavigationItem(value.href)"
+            v-text="value.name"
+          />
+        </div>
       </slot>
       <slot name="tooltip">
         <div class="nav__item--tooltip" v-text="value.tooltip" />
@@ -25,10 +26,16 @@ export default {
       default: () => {
         return [
           {
-            name: "Lorem Ipsum",
-            href: "https://google.com",
-            tooltip: "Some Tooltip"
-          }
+            name: "Home",
+            href: "/",
+            tooltip: "Some Tooltip",
+          },
+          {
+            name: "About",
+            href: "/about",
+            tooltip: "Some Tooltip",
+          },
+
           // {
           //   name: 'Lorem Ipsum',
           //   href: 'https://google.com',
@@ -40,11 +47,16 @@ export default {
           //   tooltip: 'Some Tooltip'
           // }
         ];
-      }
-    }
+      },
+    },
   },
   data() {
     return {};
+  },
+  methods: {
+    toggleNavigationItem(url) {
+      this.$emit('clickedNavigation', url);
+    }
   }
 };
 </script>

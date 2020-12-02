@@ -1,6 +1,6 @@
 <template>
-    <div :id="inputData.id" class="wrapperheader">
-        <slot name="title">
+    <div :id="inputData.id" class="wrapper__header">
+      <slot name="title">
         <div class="wrapper__header--title" v-text="inputData.header_title" />
       </slot>
       <slot name="subtitle">
@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "Wrapperheader",
+  name: "WrapperHeader",
   props: {
     inputData: {
       type: Object,
@@ -53,9 +53,9 @@ export default {
     return {};
   },
   methods:{
-      toggle(url) {
-          this.$emit("clickedButton", url);
-      }
+    toggle(url) {
+      this.$emit("clickedButton", url);
+    }
   }
 };
 </script>
