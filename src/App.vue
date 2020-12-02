@@ -9,17 +9,17 @@
 </template>
 
 <script>
-import AppHeader from '../src/components/AppHeader';
+import AppHeader from "../src/components/AppHeader";
 import AppFooter from "../src/components/AppFooter";
 export default {
   name: "App",
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss">

@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import Navigation from './Navigation.vue';
+import Navigation from "./Navigation.vue";
 export default {
-  components: { 
-    Navigation 
+  components: {
+    Navigation,
   },
   name: "AppHeader",
   data() {
@@ -20,11 +20,11 @@ export default {
   },
   methods: {
     clickedNavigation(url) {
-      this.$router.push(url).catch(err => {
-        console.log(err +'error');
+      this.$router.push(url).catch((err) => {
+        console.log(err + "error");
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

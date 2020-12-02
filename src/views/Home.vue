@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div class="home">
     <topcard />
     <wrapper 
       @clickedContainerButton="navigate"

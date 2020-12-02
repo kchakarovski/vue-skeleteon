@@ -7,7 +7,7 @@
             class="href"
             @click="toggleNavigationItem(value.href)"
             v-text="value.name"
-            v-tooltip.bottom-center="value.tooltip"
+            v-tooltip.bottom="value.tooltip"
           />
         </div>
       </slot>
@@ -56,9 +56,9 @@ export default {
   },
   methods: {
     toggleNavigationItem(url) {
-      this.$emit('clickedNavigation', url);
-    }
-  }
+      this.$emit("clickedNavigation", url);
+    },
+  },
 };
 </script>
 

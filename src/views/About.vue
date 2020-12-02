@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div class="about">
     <topcard />
     <h1>Hello from About Page</h1>
     <lastcard />

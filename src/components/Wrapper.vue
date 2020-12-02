@@ -14,7 +14,8 @@
         <item :config="configItemsA"> </item>
       </div>
       <div class="wrapper__container--right">
-        <item :config="configItemsB" @clickedButton="toggleFromContainer"> </item>
+        <item :config="configItemsB" @clickedButton="toggleFromContainer">
+        </item>
       </div>
     </div>
   </div>
