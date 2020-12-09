@@ -18,7 +18,9 @@ export default {
     AppFooter
   },
   data() {
-    return {};
+    return {
+      
+    };
   }
 };
 </script>

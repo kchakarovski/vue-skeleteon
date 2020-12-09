@@ -1,11 +1,11 @@
 <template>
   <div id="home">
-    <topcard />
-    <wrapper 
+    <topcard :inputData="inputData.topCard" />
+    <wrapper
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
     />
-    <lastcard />
+    <lastcard :inputData="inputData.lastCard"/>
   </div>
 </template>
 
@@ -13,6 +13,8 @@
 import Topcard from "../components/Topcard";
 import Wrapper from "../components/Wrapper";
 import Lastcard from "../components/Lastcard";
+import { mapGetters } from "vuex";
+
 export default {
   name: "Home",
   components: {
@@ -27,6 +29,9 @@ export default {
     navigate(url) {
       this.$router.push(url);
     }
+  },
+  computed: {
+    ...mapGetters(["inputData"])
   }
 };
 </script>
