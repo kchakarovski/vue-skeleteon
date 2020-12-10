@@ -1,12 +1,10 @@
 <template>
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
-    <div v-for="(value, key) in inputData" :key="key">
       <wrapper-header
         :inputData="inputData.header"
         @clickedButton="toggleFromHeader"
       />
-    </div>
     <!-- Item Component -->
     <div
       v-for="(value, key) in inputData.widgets"
