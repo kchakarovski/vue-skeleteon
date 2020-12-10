@@ -14,10 +14,14 @@
       class="wrapper__container"
     >
       <div class="wrapper__container--left">
-        <item :inputData="getWrapper.wrapperWrap" :config="configItemsA" />
+        <item :inputData="getWrapper.wrapperWrap" :config="getConfig.cfgA" />
       </div>
       <div class="wrapper__container--right">
-        <item :inputData="getWrapper.wrapperWrap" :config="configItemsB" @clickedButton="toggleFromContainer" />
+        <item
+          :inputData="getWrapper.wrapperWrap"
+          :config="getConfig.cfgB"
+          @clickedButton="toggleFromContainer"
+        />
       </div>
     </div>
   </div>
@@ -148,7 +152,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["getwrapperHeader", "getwrapperWrap", "getWrapper", "configurationA", "configurationB"]),
+    ...mapGetters(["getWrapper", "getConfig", "getCard"]),
   },
 };
 </script>

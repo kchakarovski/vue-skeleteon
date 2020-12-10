@@ -5,7 +5,7 @@
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
     />
-    <lastcard :inputData="getCard.lastCard"/>
+    <lastcard :inputData="getCard.lastCard" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Topcard,
     Wrapper,
-    Lastcard
+    Lastcard,
   },
   data() {
     return {};
@@ -28,12 +28,10 @@ export default {
   methods: {
     navigate(url) {
       this.$router.push(url);
-    }
+    },
   },
   computed: {
-    ...mapGetters([
-      "getCard",
-    ])
-  }
+    ...mapGetters(["getCard"]),
+  },
 };
 </script>
