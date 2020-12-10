@@ -1,11 +1,12 @@
 <template>
   <div id="home">
-    <topcard :inputData="inputData.topCard" />
+    <topcard :inputData="homeInputData.topCard" />
     <wrapper
+      :inputData="homeInputData.wrapper"
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
     />
-    <lastcard :inputData="inputData.lastCard"/>
+    <lastcard :inputData="homeInputData.lastCard" />
   </div>
 </template>
 
@@ -20,18 +21,15 @@ export default {
   components: {
     Topcard,
     Wrapper,
-    Lastcard
-  },
-  data() {
-    return {};
+    Lastcard,
   },
   methods: {
     navigate(url) {
       this.$router.push(url);
-    }
+    },
   },
   computed: {
-    ...mapGetters(["inputData"])
-  }
+    ...mapGetters(["homeInputData"]),
+  },
 };
 </script>

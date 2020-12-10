@@ -2,7 +2,10 @@
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
     <div v-for="(value, key) in inputData" :key="key">
-      <wrapper-header @clickedButton="toggleFromHeader" />
+      <wrapper-header
+        :inputData="inputData.header"
+        @clickedButton="toggleFromHeader"
+      />
     </div>
     <!-- Item Component -->
     <div
@@ -11,10 +14,14 @@
       class="wrapper__container"
     >
       <div class="wrapper__container--left">
-        <item :config="configItemsA"> </item>
+        <item :inputData="value" :config="inputData.config.configItemsA" />
       </div>
       <div class="wrapper__container--right">
-        <item :config="configItemsB" @clickedButton="toggleFromContainer"> </item>
+        <item
+          :inputData="value"
+          :config="inputData.config.configItemsB"
+          @clickedButton="toggleFromContainer"
+        />
       </div>
     </div>
   </div>
@@ -40,18 +47,21 @@ export default {
       type: Object,
       default: () => {
         return {
-          string_id: "#about-section",
-          header_title: "Header Title",
-          header_subtitle: "Header Subtitle",
-          header_img: "Some https://image.com",
-          header_description: "Some Description",
-          header_buttonText: "About",
-          header_buttonLink: "/about",
+          id: "#home-section",
+          header:{
+            string_id: "#home-section",
+            header_title: "Vuex Header",
+            header_subtitle: "Vuex Header Subtitle",
+            header_img: "https://via.placeholder.com/200x150",
+            header_description: "Vuex Header Description",
+            header_buttonText: "Vuex Button",
+            header_buttonLink: "/about"
+          },
           widgets: [
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -59,7 +69,7 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -67,7 +77,7 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -75,7 +85,7 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -83,7 +93,7 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -91,7 +101,7 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
@@ -99,41 +109,33 @@ export default {
             {
               title: "Titlew",
               subtitle: "Subtitle",
-              img: "https://someimage.com",
+              img: "https://via.placeholder.com/200x150",
               description: "Some description",
               buttonText: "Some Text",
               buttonLink: "/some-awesome-description",
             },
           ],
+          config: {
+            configItemsA: {
+              title: false,
+              subtitle: false,
+              description: false,
+              buttonLink: false,
+              buttonText: false,
+              img: true,
+            },
+            configItemsB: {
+              title: true,
+              subtitle: true,
+              description: true,
+              buttonLink: true,
+              buttonText: true,
+              img: false,
+            }
+          }
         };
       },
-    },
-    configItemsA: {
-      type: Object,
-      default: () => {
-        return {
-          title: false,
-          subtitle: false,
-          description: false,
-          buttonLink: false,
-          buttonText: false,
-          img: true,
-        };
-      },
-    },
-    configItemsB: {
-      type: Object,
-      default: () => {
-        return {
-          title: true,
-          subtitle: true,
-          description: true,
-          buttonLink: true,
-          buttonText: true,
-          img: false,
-        };
-      },
-    },
+    }
   },
   methods: {
     toggleFromHeader(buttonLink) {
@@ -142,8 +144,6 @@ export default {
     toggleFromContainer(buttonLink) {
       this.$emit("clickedContainerButton", buttonLink);
     },
-  },
+  }
 };
 </script>
-
-<style></style>
