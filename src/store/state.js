@@ -98,7 +98,21 @@ export default {
       title: "Last Card // Hello from Vuex Title",
       subtitle: "Last Card // Hello from Vuex Subtitle",
       description: "Last Card // Some description from Vuex",
-      img: "https://via.placeholder.com/800x600"
+      img: "https://via.placeholder.com/600x400"
     },
+  },
+  about: {
+    topCard: {
+      title: "Hello from Vuex Title ( TOP About )",
+      subtitle: "Hello from Vuex Subtitle ( TOP About)",
+      description: "Hello from Vuex Description ( TOP About )",
+      img: "https://via.placeholder.com/200x200"
+    },
+    lastCard: {
+      title: "Hello from Vuex Title ( LAST About )",
+      subtitle: "Hello from Vuex Subtitle ( LAST About )",
+      description: "Hello from Vuex Description ( LAST About )",
+      img: "https://via.placeholder.com/200x200"
+    }
   }
 };

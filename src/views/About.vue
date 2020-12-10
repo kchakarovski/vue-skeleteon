@@ -1,15 +1,15 @@
 <template>
   <div id="home">
-    <topcard />
+    <topcard :inputData="aboutInputData.topCard" />
     <h1>Hello from About Page</h1>
-    <lastcard />
+    <lastcard :inputData="aboutInputData.lastCard" />
   </div>
 </template>
 
 <script>
 import Topcard from "../components/Topcard";
 import Lastcard from "../components/Lastcard";
-// import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Home",
@@ -21,10 +21,7 @@ export default {
     return {};
   },
   computed: {
-    // ...mapGetters([
-    //   "getHeader",
-    //   "getFooter"
-    // ])
+    ...mapGetters(["aboutInputData"]),
   },
   methods: {
     // showFromStore() {
