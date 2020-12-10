@@ -1,7 +1,7 @@
 export default {
   // header: 'Hello from Vuex',
   // footer: 'Hello from Vuex Footer',
-  inputData: {
+  Cards: {
     topCard: {
       title: "Hello from Vuex Title",
       subtitle: "Hello from Vuex Subtitle",
@@ -15,4 +15,140 @@ export default {
       img: "https://via.placeholder.com/1000x650"
     }
   },
+  Wrapper: {
+    wrapperHeader:{
+      string_id: "#about-section",
+      header_title: "Vuex Header",
+      header_subtitle: "Vuex Header Subtitle",
+      header_img: "https://via.placeholder.com/200x150",
+      header_description: "Vuex Header Description",
+      header_buttonText: "Vuex Button",
+      header_buttonLink: "/about"
+    },
+    wrapperWrap:{
+      title: "Title num 1 Vuex",
+      subtitle: "Subtitle num 1 Vuex",
+      description: "Some description num 1 Vuex",
+      buttonText: "Some Text",
+      buttonLink: "/some-awesome-description",
+      img: "https://via.placeholder.com/400x200",
+    },
+  },
+
+  // wrapperHeader: {
+  //   string_id: "#about-section",
+  //   header_title: "Vuex Header",
+  //   header_subtitle: "Vuex Header Subtitle",
+  //   header_img: "https://via.placeholder.com/200x150",
+  //   header_description: "Vuex Header Description",
+  //   header_buttonText: "Vuex Button",
+  //   header_buttonLink: "/about"
+  // },
+  // wrapperWrap: [{
+  //     title: "Title num 1 Vuex",
+  //     subtitle: "Subtitle num 1 Vuex",
+  //     description: "Some description num 1 Vuex",
+  //     buttonText: "Some Text",
+  //     buttonLink: "/some-awesome-description",
+  //     img: "https://via.placeholder.com/400x200",
+  //   },
+  //   {
+  //     title: "Title num 2 Vuex",
+  //     subtitle: "Subtitle",
+  //     description: "Some description",
+  //     buttonText: "Some Text",
+  //     buttonLink: "/some-awesome-description",
+  //     img: "https://via.placeholder.com/400x200",
+  //   },
+  //   {
+  //     title: "Title num 3 Vuex",
+  //     subtitle: "Subtitle",
+  //     description: "Some description",
+  //     buttonText: "Some Text",
+  //     buttonLink: "/some-awesome-description",
+  //     img: "https://via.placeholder.com/400x200",
+  //   },
+  // ],
+  cfgA: {
+    title: false,
+    subtitle: false,
+    description: false,
+    buttonLink: false,
+    buttonText: false,
+    img: true,
+  },
+  cfgB: {
+    title: true,
+    subtitle: true,
+    description: true,
+    buttonLink: true,
+    buttonText: true,
+    img: false,
+  },
+  // Wrapper: {
+  //   string_id: "#about-section",
+  //   header_title: "Vuex Title",
+  //   header_subtitle: "Vuex Subtitle",
+  //   header_img: "https://via.placeholder.com/600x400",
+  //   header_description: "Vuex Description",
+  //   header_buttonText: "Vuex Button",
+  //   header_buttonLink: "/about",
+  //   widgets: [{
+  //       title: "Title num 1 Vuex",
+  //       subtitle: "Subtitle num 1 Vuex",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description num 1 Vuex",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 2 Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 3 Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 4 Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 5 Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 6Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //     {
+  //       title: "Title num 7 Vuex",
+  //       subtitle: "Subtitle",
+  //       img: "https://via.placeholder.com/1024x768",
+  //       description: "Some description",
+  //       buttonText: "Some Text",
+  //       buttonLink: "/some-awesome-description",
+  //     },
+  //   ],
+  // }
 };

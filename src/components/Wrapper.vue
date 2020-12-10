@@ -2,7 +2,10 @@
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
     <div v-for="(value, key) in inputData" :key="key">
-      <wrapper-header @clickedButton="toggleFromHeader" />
+      <wrapper-header
+        :inputData="getWrapper.wrapperHeader"
+        @clickedButton="toggleFromHeader"
+      />
     </div>
     <!-- Item Component -->
     <div
@@ -11,10 +14,10 @@
       class="wrapper__container"
     >
       <div class="wrapper__container--left">
-        <item :config="configItemsA"> </item>
+        <item :inputData="getWrapper.wrapperWrap" :config="configItemsA" />
       </div>
       <div class="wrapper__container--right">
-        <item :config="configItemsB" @clickedButton="toggleFromContainer"> </item>
+        <item :inputData="getWrapper.wrapperWrap" :config="configItemsB" @clickedButton="toggleFromContainer" />
       </div>
     </div>
   </div>
@@ -23,6 +26,7 @@
 <script>
 import Item from "../components/Item";
 import WrapperHeader from "../components/WrapperHeader";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Wrapper",
@@ -142,6 +146,9 @@ export default {
     toggleFromContainer(buttonLink) {
       this.$emit("clickedContainerButton", buttonLink);
     },
+  },
+  computed: {
+    ...mapGetters(["getwrapperHeader", "getwrapperWrap", "getWrapper", "configurationA", "configurationB"]),
   },
 };
 </script>

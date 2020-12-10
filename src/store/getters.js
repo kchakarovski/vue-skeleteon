@@ -1,5 +1,10 @@
 export default {
   // getHeader: state => state.header,
   // getFooter: state => state.footer,
-  inputData: state => state.inputData
+  getCard: state => state.Cards,
+  getwrapperHeader: state => state.wrapperHeader,
+  getwrapperWrap: state => state.wrapperWrap,
+  getWrapper: state => state.Wrapper,
+  configurationA: state => state.cfgA,
+  configurationB: state => state.cfgB
 };

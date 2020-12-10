@@ -1,11 +1,11 @@
 <template>
   <div id="home">
-    <topcard :inputData="inputData.topCard" />
+    <topcard :inputData="getCard.topCard" />
     <wrapper
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
     />
-    <lastcard :inputData="inputData.lastCard"/>
+    <lastcard :inputData="getCard.lastCard"/>
   </div>
 </template>
 
@@ -31,7 +31,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["inputData"])
+    ...mapGetters([
+      "getCard",
+    ])
   }
 };
 </script>
