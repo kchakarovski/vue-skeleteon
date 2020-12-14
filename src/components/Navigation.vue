@@ -36,6 +36,11 @@ export default {
             href: "/about",
             tooltip: "Some Tooltip",
           },
+          {
+            name: "Blog",
+            href: "/blog",
+            tooltip: "Some Tooltip",
+          }
         ];
       },
     },
