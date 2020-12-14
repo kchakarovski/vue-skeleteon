@@ -1,10 +1,8 @@
 export default {
-  // fetchData({ commit }) {
-  //   return client.fetchData().then(data => {
-  //     commit("setData", data);
-  //   });
-  // },
-  // setBurger({ commit }) {
-  //   commit("updateBurger");
-  // }
+  increameantCounter({ commit }) {
+    commit("updateCounter");
+  },
+  updateNavigationData({ commit }, payload) {
+    commit("updateNavigation", payload);
+  }
 };

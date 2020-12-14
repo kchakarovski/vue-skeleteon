@@ -1,11 +1,8 @@
 export default {
-  setData(state, data) {
-    state.inputData = data;
-    setTimeout(() => {
-      state.loadingScreen = false;
-    }, 1300);
+  updateCounter(state) {
+    state.counter += 1;
   },
-  updateBurger: state => {
-    state.isNavOpen = !state.isNavOpen;
+  updateNavigation(state, data) {
+    state.navigation = data;
   }
 };

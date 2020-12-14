@@ -1,5 +1,9 @@
 <template>
   <div id="home">
+    <div class="">
+      <span>{{ counter }}</span>
+      <button @click="increameantCounter">+ 1 Like</button>
+    </div>
     <topcard :inputData="homeInputData.topCard" />
     <wrapper
       :inputData="homeInputData.wrapper"
@@ -14,7 +18,7 @@
 import Topcard from "../components/Topcard";
 import Wrapper from "../components/Wrapper";
 import Lastcard from "../components/Lastcard";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Home",
@@ -24,12 +28,16 @@ export default {
     Lastcard,
   },
   methods: {
+    ...mapActions(["increameantCounter"]),
     navigate(url) {
       this.$router.push(url);
     },
   },
   computed: {
-    ...mapGetters(["homeInputData"]),
+    ...mapGetters([
+      "homeInputData",
+      "counter"
+    ]),
   },
 };
 </script>

@@ -204,26 +204,6 @@ export default {
       img: "https://via.placeholder.com/200x200"
     }
   },
-  navigation: [
-    {
-      name: "Home",
-      href: "/",
-      tooltip: "Some Tooltip",
-    },
-    {
-      name: "About",
-      href: "/about",
-      tooltip: "Some Tooltip",
-    },
-    {
-      name: "Blog",
-      href: "/blog",
-      tooltip: "Some Tooltip",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-      tooltip: "Some Tooltip",
-    }
-  ]
+  navigation: null,
+  counter: 0
 };
