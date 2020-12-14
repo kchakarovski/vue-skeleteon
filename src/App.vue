@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <app-header />
+    <app-header :navigation="navigation" />
 
     <router-view />
 
@@ -11,6 +11,8 @@
 <script>
 import AppHeader from '../src/components/AppHeader';
 import AppFooter from "../src/components/AppFooter";
+import { mapGetters } from "vuex";
+
 export default {
   name: "App",
   components: {
@@ -21,7 +23,10 @@ export default {
     return {
       
     };
-  }
+  },
+  computed: {
+    ...mapGetters(["navigation"]),
+  },
 };
 </script>
 <style lang="scss">

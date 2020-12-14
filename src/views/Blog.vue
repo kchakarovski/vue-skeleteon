@@ -1,12 +1,12 @@
 <template>
-  <div id="about">
-    <topcard :inputData="aboutInputData.topCard" />
+  <div id="blog">
+    <topcard :inputData="blogInputData.topCard" />
     <wrapper
-      :inputData="aboutInputData.wrapper"
+      :inputData="blogInputData.wrapper"
       @clickedContainerButton="navigate"
       @clickedHeaderButton="navigate"
     />
-    <lastcard :inputData="aboutInputData.lastCard" />
+    <lastcard :inputData="blogInputData.lastCard" />
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["aboutInputData"]),
+    ...mapGetters(["blogInputData"]),
   },
   methods: {
     // showFromStore() {

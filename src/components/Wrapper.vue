@@ -1,10 +1,10 @@
-<template>
+ <template>
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
-      <wrapper-header
-        :inputData="inputData.header"
-        @clickedButton="toggleFromHeader"
-      />
+    <wrapper-header
+      :inputData="inputData.header"
+      @clickedButton="toggleFromHeader"
+    />
     <!-- Item Component -->
     <div
       v-for="(value, key) in inputData.widgets"
@@ -46,14 +46,14 @@ export default {
       default: () => {
         return {
           id: "#home-section",
-          header:{
+          header: {
             string_id: "#home-section",
             header_title: "Vuex Header",
             header_subtitle: "Vuex Header Subtitle",
             header_img: "https://via.placeholder.com/200x150",
             header_description: "Vuex Header Description",
             header_buttonText: "Vuex Button",
-            header_buttonLink: "/about"
+            header_buttonLink: "/about",
           },
           widgets: [
             {
@@ -129,11 +129,11 @@ export default {
               buttonLink: true,
               buttonText: true,
               img: false,
-            }
-          }
+            },
+          },
         };
       },
-    }
+    },
   },
   methods: {
     toggleFromHeader(buttonLink) {
@@ -142,6 +142,6 @@ export default {
     toggleFromContainer(buttonLink) {
       this.$emit("clickedContainerButton", buttonLink);
     },
-  }
+  },
 };
 </script>

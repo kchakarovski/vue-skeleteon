@@ -7,6 +7,7 @@
             class="href"
             @click="toggleNavigationItem(value.href)"
             v-text="value.name"
+            v-tooltip.bottom="value.tooltip"
           />
         </div>
       </slot>
@@ -35,17 +36,11 @@ export default {
             href: "/about",
             tooltip: "Some Tooltip",
           },
-
-          // {
-          //   name: 'Lorem Ipsum',
-          //   href: 'https://google.com',
-          //   tooltip: 'Some Tooltip'
-          // },
-          // {
-          //   name: 'Lorem Ipsum',
-          //   href: 'https://google.com',
-          //   tooltip: 'Some Tooltip'
-          // }
+          {
+            name: "Blog",
+            href: "/blog",
+            tooltip: "Some Tooltip",
+          }
         ];
       },
     },
@@ -55,9 +50,9 @@ export default {
   },
   methods: {
     toggleNavigationItem(url) {
-      this.$emit('clickedNavigation', url);
-    }
-  }
+      this.$emit("clickedNavigation", url);
+    },
+  },
 };
 </script>
 
