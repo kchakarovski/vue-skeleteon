@@ -4,5 +4,8 @@ export default {
   },
   updateNavigation(state, data) {
     state.navigation = data;
+  },
+  updateBlog(state, data) {
+    state.blog = data;
   }
 };

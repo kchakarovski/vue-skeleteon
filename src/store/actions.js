@@ -4,5 +4,8 @@ export default {
   },
   updateNavigationData({ commit }, payload) {
     commit("updateNavigation", payload);
+  },
+  updateBlogData({ commit }, payload) {
+    commit("updateBlog", payload);
   }
 };
