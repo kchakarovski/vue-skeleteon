@@ -7,5 +7,8 @@ export default {
   },
   updateBlog(state, data) {
     state.blog = data;
+  },
+  updateContact(state, data) {
+    state.contactaction = data;
   }
 };

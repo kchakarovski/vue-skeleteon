@@ -40,7 +40,8 @@ export default {
             name: "Blog",
             href: "/blog",
             tooltip: "Some Tooltip",
-          }
+          },
+          
         ];
       },
     },

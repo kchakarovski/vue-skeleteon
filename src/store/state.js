@@ -108,6 +108,13 @@ export default {
       description: "Hello from Vuex Description ( TOP About )",
       img: "https://via.placeholder.com/200x200"
     },
+    contactest: {
+      name: "Name from Vuex from about",
+      surname: "Surname from Vuex from about",
+      number: "Number from Vuex from about",
+      adress: "Adress from Vuex from about",
+      city: "City from Vuex from about",
+    },
     wrapper: {
       id: "#home-section",
       header: {
@@ -154,5 +161,13 @@ export default {
     }
   },
   navigation: null,
-  counter: 0
+  counter: 0,
+  contact: {
+    name: "Name from Vuex",
+    surname: "Surname from Vuex",
+    number: "Number from Vuex",
+    adress: "Adress from Vuex",
+    city: "City from Vuex",
+  },
+  contactaction: null,
 };
