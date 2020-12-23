@@ -8,7 +8,7 @@ export default {
   updateBlogData({ commit }, payload) {
     commit("updateBlog", payload);
   },
-  updateContactData({commit}, payload) {
-    commit("updateContact", payload)
+  updateContactData({ commit }, payload) {
+    commit("updateContact", payload);
   }
 };

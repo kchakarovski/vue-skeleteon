@@ -31,13 +31,13 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["aboutInputData", "counter"]),
+    ...mapGetters(["aboutInputData", "counter"])
   },
   methods: {
     ...mapActions(["increameantCounter"]),
     navigate(url) {
       this.$router.push(url);
     }
-  },
+  }
 };
 </script>

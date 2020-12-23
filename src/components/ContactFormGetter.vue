@@ -1,27 +1,25 @@
 <template>
-  <div class="contactformgetter">
-      <contact-form :inputDataContact="inputContact" />
+  <div v-if="inputContact" class="contactformgetter">
+    <contact-form :inputDataContact="inputContact" />
   </div>
 </template>
 <script>
-
-import ContactForm from '../components/ContactForm';
+import ContactForm from "../components/ContactForm";
 
 export default {
   name: "ContactFormGetter",
   components: {
-    ContactForm,
+    ContactForm
   },
   props: {
     inputContact: {
-      type: Object, 
-    },
+      type: Object
+    }
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

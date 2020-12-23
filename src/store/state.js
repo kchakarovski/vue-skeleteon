@@ -18,13 +18,14 @@ export default {
         header_buttonText: "Vuex Button",
         header_buttonLink: "/about"
       },
-      widgets: [{
+      widgets: [
+        {
           title: "Titlew",
           subtitle: "Subtitle",
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -32,7 +33,7 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -40,7 +41,7 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -48,7 +49,7 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -56,7 +57,7 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -64,7 +65,7 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
+          buttonLink: "/some-awesome-description"
         },
         {
           title: "Titlew",
@@ -72,8 +73,8 @@ export default {
           img: "https://via.placeholder.com/200x150",
           description: "Some description",
           buttonText: "Some Text",
-          buttonLink: "/some-awesome-description",
-        },
+          buttonLink: "/some-awesome-description"
+        }
       ],
       config: {
         configItemsA: {
@@ -82,7 +83,7 @@ export default {
           description: false,
           buttonLink: false,
           buttonText: false,
-          img: true,
+          img: true
         },
         configItemsB: {
           title: true,
@@ -90,7 +91,7 @@ export default {
           description: true,
           buttonLink: true,
           buttonText: true,
-          img: false,
+          img: false
         }
       }
     },
@@ -99,7 +100,7 @@ export default {
       subtitle: "Last Card // Hello from Vuex Subtitle",
       description: "Last Card // Some description from Vuex",
       img: "https://via.placeholder.com/600x400"
-    },
+    }
   },
   about: {
     topCard: {
@@ -113,7 +114,7 @@ export default {
       surname: "Surname from Vuex from about",
       number: "Number from Vuex from about",
       adress: "Adress from Vuex from about",
-      city: "City from Vuex from about",
+      city: "City from Vuex from about"
     },
     wrapper: {
       id: "#home-section",
@@ -126,14 +127,16 @@ export default {
         header_buttonText: "Vuex Button",
         header_buttonLink: "/about"
       },
-      widgets: [{
-        title: "Lorem ipsum about",
-        subtitle: "Subtitle about",
-        img: "https://via.placeholder.com/200x150",
-        description: "Some description",
-        buttonText: "Some Text",
-        buttonLink: "/some-awesome-description",
-      }, ],
+      widgets: [
+        {
+          title: "Lorem ipsum about",
+          subtitle: "Subtitle about",
+          img: "https://via.placeholder.com/200x150",
+          description: "Some description",
+          buttonText: "Some Text",
+          buttonLink: "/some-awesome-description"
+        }
+      ],
       config: {
         configItemsA: {
           title: false,
@@ -141,7 +144,7 @@ export default {
           description: false,
           buttonLink: false,
           buttonText: false,
-          img: true,
+          img: true
         },
         configItemsB: {
           title: true,
@@ -149,7 +152,7 @@ export default {
           description: true,
           buttonLink: true,
           buttonText: true,
-          img: false,
+          img: false
         }
       }
     },
@@ -167,7 +170,7 @@ export default {
     surname: "Surname from Vuex",
     number: "Number from Vuex",
     adress: "Adress from Vuex",
-    city: "City from Vuex",
+    city: "City from Vuex"
   },
-  contactaction: null,
+  contactaction: null
 };

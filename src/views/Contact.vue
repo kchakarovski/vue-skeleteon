@@ -13,7 +13,7 @@
       style="color: red; text-align: center"
     />
     <div style="color: orange; text-align: center">mapActions</div>
-    
+
     <div style="color: white; text-align: right">mapGetters</div>
     <contact-form-getter
       :inputContact="aboutInputData.contactest"
@@ -25,12 +25,12 @@
 
 <script>
 import ContactFormGetter from "../components/ContactFormGetter";
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "contact",
   components: {
-    ContactFormGetter,
+    ContactFormGetter
   },
   data() {
     return {};
@@ -39,27 +39,10 @@ export default {
     ...mapGetters([
       "contactInputData",
       "contactInputDataAction",
-      "aboutInputData",
-    ]),
-  },
-  mounted() {
-    this.getContactData();
-  },
-  methods: {
-    ...mapActions(["updateContactData"]),
-    getContactData() {
-      const contactData = {
-        name: "Name from Vuex ACTION",
-        surname: "Surname from Vuex ACTION",
-        number: "Number from Vuex ACTION",
-        adress: "Adress from Vuex ACTION",
-        city: "City from Vuex ACTION",
-      };
-      this.updateContactData(contactData);
-    },
-  },
+      "aboutInputData"
+    ])
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

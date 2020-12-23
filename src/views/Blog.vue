@@ -25,16 +25,16 @@ export default {
   components: {
     Topcard,
     Lastcard,
-    Wrapper,
+    Wrapper
   },
   computed: {
-    ...mapGetters(["blogInputData", "counter"]),
+    ...mapGetters(["blogInputData", "counter"])
   },
   methods: {
     ...mapActions(["increameantCounter"]),
     navigate(url) {
       this.$router.push(url);
     }
-  },
+  }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="topcard">
+  <div  v-if="inputData" class="topcard">
     <slot name="img">
       <img :src="inputData.img" :alt="inputData.title" />
     </slot>

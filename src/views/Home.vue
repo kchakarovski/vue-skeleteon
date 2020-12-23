@@ -34,10 +34,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters([
-      "homeInputData",
-      "counter"
-    ]),
+    ...mapGetters(["homeInputData", "counter"]),
   },
 };
 </script>

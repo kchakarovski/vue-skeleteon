@@ -1,6 +1,10 @@
 <template>
-  <div class="header">
-    <navigation :inputData="navigation" @clickedNavigation="clickedNavigation">
+  <div v-if="navigation" class="header">
+    <navigation
+      :inputData="navigation"
+      @clickedButton="clickedButton"
+      @clickedNavigation="clickedNavigation"
+    >
       <template v-slot:tooltip>
         <span />
       </template>
@@ -18,10 +22,10 @@ export default {
   data() {
     return {};
   },
-  props:{
+  props: {
     navigation: {
-      type: Array
-    }
+      type: Array,
+    },
   },
   methods: {
     clickedNavigation(url) {
@@ -29,8 +33,11 @@ export default {
         console.log(err + "error");
       });
     },
+    clickedButton(href) {
+      this.$router.push(href);
+    },
   },
-}
+};
 </script>
 
 <style></style>
