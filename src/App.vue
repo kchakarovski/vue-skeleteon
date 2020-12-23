@@ -11,6 +11,8 @@
 <script>
 import AppHeader from '../src/components/AppHeader';
 import AppFooter from "../src/components/AppFooter";
+import { navigation } from "./static/navigation";
+import { blogData } from './static/blog';
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -21,37 +23,22 @@ export default {
   },
   mounted() {
     this.getNavigationData();
+    this.getBlogData();
   },
   computed: {
     ...mapGetters(["navigation"]),
   },
   methods: {
-    ...mapActions(['updateNavigationData']),
+    ...mapActions([
+      'updateNavigationData',
+      'updateBlogData'
+    ]),
     getNavigationData() {
-      const nav =  [
-        {
-          name: "Home",
-          href: "/",
-          tooltip: "Some Tooltip",
-        },
-        {
-          name: "About",
-          href: "/about",
-          tooltip: "Some Tooltip",
-        },
-        {
-          name: "Blog",
-          href: "/blog",
-          tooltip: "Some Tooltip",
-        },
-        {
-          name: "Contact",
-          href: "/contact",
-          tooltip: "Some Tooltip",
-        }
-      ];
-      this.updateNavigationData(nav);
-    }
+      this.updateNavigationData(navigation);
+    },
+    getBlogData() {
+      this.updateBlogData(blogData);
+    },
   }
 };
 </script>

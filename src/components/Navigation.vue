@@ -30,18 +30,20 @@ export default {
             name: "Home",
             href: "/",
             tooltip: "Some Tooltip",
+            isPage: true
           },
           {
             name: "About",
             href: "/about",
             tooltip: "Some Tooltip",
+            isPage: true
           },
           {
             name: "Blog",
             href: "/blog",
             tooltip: "Some Tooltip",
-          },
-          
+            isPage: true
+          }
         ];
       },
     },
@@ -52,7 +54,7 @@ export default {
   methods: {
     toggleNavigationItem(url) {
       this.$emit("clickedNavigation", url);
-    },
+    }
   },
 };
 </script>

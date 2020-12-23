@@ -1,5 +1,8 @@
 <template>
-  <div class="contact">
+  <div 
+    v-if="inputDataContact" 
+    class="contact"
+  >
     <slot name="name">
       <div class="contact--name" v-text="inputDataContact.name" />
     </slot>
