@@ -24,6 +24,12 @@ export var navigation = [
     isPage: true
   },
   {
+    name: "LastCard",
+    href: "#last-card",
+    tooltip: "Some Tooltip",
+    isPage: false
+  },
+  {
     name: "Contact",
     href: "/contact",
     tooltip: "Some Tooltip",

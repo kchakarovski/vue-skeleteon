@@ -15,6 +15,7 @@
             v-else
             @click="toggleButton(value.href)"
             v-text="value.name"
+            v-tooltip.bottom="value.tooltip"
           />
         </div>
       </slot>
@@ -39,18 +40,6 @@ export default {
             tooltip: "Some Tooltip",
             isPage: true,
           },
-          {
-            name: "About",
-            href: "/about",
-            tooltip: "Some Tooltip",
-            isPage: true,
-          },
-          {
-            name: "Blog",
-            href: "/blog",
-            tooltip: "Some Tooltip",
-            isPage: true,
-          },
         ];
       },
     },
@@ -63,9 +52,9 @@ export default {
       this.$emit("clickedNavigation", url);
     },
     toggleButton(href) {
+      this.$emit(href);
       document.getElementById(href).scrollIntoView({ behavior: "smooth" });
-      this.$emit("clickedButton", href);
-    }
+    },
   },
 };
 </script>

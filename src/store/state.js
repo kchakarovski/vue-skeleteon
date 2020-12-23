@@ -96,6 +96,7 @@ export default {
       }
     },
     lastCard: {
+      id: "#last-card",
       title: "Last Card // Hello from Vuex Title",
       subtitle: "Last Card // Hello from Vuex Subtitle",
       description: "Last Card // Some description from Vuex",

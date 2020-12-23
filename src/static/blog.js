@@ -46,6 +46,7 @@ export const blogData = {
     }
   },
   lastCard: {
+    id: "#last-card",
     title: "Hello from Vuex Title ( LAST BLOG )",
     subtitle: "Hello from Vuex Subtitle ( LAST BLOG )",
     description: "Hello from Vuex Description ( LAST BLOG )",
