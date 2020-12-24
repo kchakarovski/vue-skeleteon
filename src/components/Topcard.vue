@@ -1,5 +1,5 @@
 <template>
-  <div class="topcard">
+  <div  :id="inputData.id" v-if="inputData" class="topcard">
     <slot name="img">
       <img :src="inputData.img" :alt="inputData.title" />
     </slot>
@@ -22,6 +22,7 @@ export default {
     inputData: {
       default: () => {
         return {
+          id: "#top-card",
           title: "Lorem Ipsum",
           subtitle: "Lorem ipsum sub",
           description: "Some description",

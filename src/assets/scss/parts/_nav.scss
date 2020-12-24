@@ -16,11 +16,14 @@
         transition: 0.7s ease-in-out;
         color: white;
         text-decoration: none;
-        cursor: pointer;           
+        cursor: pointer;
       }
 
-      &:hover {
-        background: #666;
+      &_test {
+        display: flex;
+        align-self: center;
+        position: relative;
+        right: 140px;
       }
     }
 

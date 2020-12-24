@@ -1,4 +1,4 @@
- <template>
+<template>
   <div :id="inputData.id" class="wrapper">
     <!-- Wrapper Header -->
     <wrapper-header

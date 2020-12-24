@@ -1,21 +1,29 @@
 <template>
-  <div class="item">
+  <div v-if="inputData" class="item">
     <slot name="title">
-    <div class="item--title" v-if="config.title" v-text="inputData.title" />
+      <div class="item--title" v-if="config.title" v-text="inputData.title" />
     </slot>
     <slot name="subtitle">
-    <div class="item--subtitle" v-if="config.subtitle" v-text="inputData.subtitle" />
+      <div
+        class="item--subtitle"
+        v-if="config.subtitle"
+        v-text="inputData.subtitle"
+      />
     </slot>
     <slot name="description">
-    <div class="item--description" v-if="config.description" v-html="inputData.description" />
+      <div
+        class="item--description"
+        v-if="config.description"
+        v-html="inputData.description"
+      />
     </slot>
     <slot name="button">
-    <button
-      class="item--btn"
-      @click="toggle(inputData.buttonLink)"
-      v-if="config.buttonLink"
-      v-text="inputData.buttonText"
-    />
+      <button
+        class="item--btn"
+        @click="toggle(inputData.buttonLink)"
+        v-if="config.buttonLink"
+        v-text="inputData.buttonText"
+      />
     </slot>
     <slot name="image">
       <div v-if="config.img" class="item--img">
@@ -27,10 +35,10 @@
 <script>
 export default {
   name: "Item",
-  data(){
-    return{
-      hide: true,
-    }
+  data() {
+    return {
+      hide: true
+    };
   },
   props: {
     inputData: {
@@ -42,9 +50,9 @@ export default {
           description: "<p>Some awesome paragraph</p>",
           buttonLink: "/about",
           buttonText: "Read more",
-          img: "https://via.placeholder.com/1300x700",
+          img: "https://via.placeholder.com/1300x700"
         };
-      },
+      }
     },
     config: {
       type: Object,
@@ -56,14 +64,14 @@ export default {
           buttonLink: true,
           buttonText: true,
           img: true
-        }
+        };
       }
     }
   },
   methods: {
     toggle(url) {
       this.$emit("clickedButton", url);
-    },
-  },
+    }
+  }
 };
 </script>

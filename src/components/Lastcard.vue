@@ -1,5 +1,5 @@
 <template>
-  <div class="lastcard">
+  <div :id="inputData.id" v-if="inputData" class="lastcard">
     <slot name="img">
       <img :src="inputData.img" :alt="inputData.title" />
     </slot>
@@ -22,17 +22,18 @@ export default {
     inputData: {
       default: () => {
         return {
+          id: "#last-card",
           title: "Lorem Ipsum",
           subtitle: "Lorem ipsum sub",
           description: "Some description",
-          img: "https://someimage.com"
+          img: "https://someimage.com",
         };
-      }
-    }
+      },
+    },
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 

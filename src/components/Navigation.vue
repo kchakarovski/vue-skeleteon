@@ -1,11 +1,19 @@
 <template>
-  <div class="nav">
+  <div v-if="inputData" class="nav">
     <div class="nav__item" v-for="(value, key) in inputData" :key="key">
       <slot name="name">
         <div class="nav__item--name">
           <a
+            v-if="value.isPage"
             class="href"
-            @click="toggleNavigationItem(value.href)"
+            @click="toggleNavigationItem(value.href, value.isPage)"
+            v-text="value.name"
+            v-tooltip.bottom="value.tooltip"
+          />
+          <button
+            class="nav__item--name_test"
+            v-else
+            @click="toggleNavigationItem(value.href, value.isPage)"
             v-text="value.name"
             v-tooltip.bottom="value.tooltip"
           />
@@ -30,17 +38,8 @@ export default {
             name: "Home",
             href: "/",
             tooltip: "Some Tooltip",
+            isPage: true,
           },
-          {
-            name: "About",
-            href: "/about",
-            tooltip: "Some Tooltip",
-          },
-          {
-            name: "Blog",
-            href: "/blog",
-            tooltip: "Some Tooltip",
-          }
         ];
       },
     },
@@ -49,9 +48,9 @@ export default {
     return {};
   },
   methods: {
-    toggleNavigationItem(url) {
-      this.$emit("clickedNavigation", url);
-    },
+    toggleNavigationItem(url, isPage) {
+      this.$emit("clickedNavigation", {url, isPage});
+    }
   },
 };
 </script>
