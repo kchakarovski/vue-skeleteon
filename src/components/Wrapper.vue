@@ -27,7 +27,7 @@
 
 <script>
 import Item from "../components/Item";
-import WrapperHeader from "../components/WrapperHeader";
+import WrapperHeader from "../components/Wrapperheader";
 
 export default {
   name: "Wrapper",
