@@ -1,10 +1,10 @@
 <template>
-  <div id="home">
+  <div v-if="homeInputData" id="home">
     <div class="">
       <span>{{ counter }}</span>
       <button @click="increameantCounter">+ 1 Like</button>
     </div>
-    <topcard :inputData="homeInputData.topCard" />
+    <topcard v-if="homeInputData" :inputData="homeInputData.topCard" />
     <wrapper
       :inputData="homeInputData.wrapper"
       @clickedContainerButton="navigate"

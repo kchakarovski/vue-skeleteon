@@ -2,7 +2,6 @@
   <div v-if="navigation" class="header">
     <navigation
       :inputData="navigation"
-      @clickedButton="clickedButton"
       @clickedNavigation="clickedNavigation"
     >
       <template v-slot:tooltip>
@@ -28,14 +27,9 @@ export default {
     },
   },
   methods: {
-    clickedNavigation(url) {
-      this.$router.push(url).catch((err) => {
-        console.log(err + "error");
-      });
-    },
-    clickedButton(href) {
-      this.$router.push(href);
-    },
+    clickedNavigation(data) {
+      this.$emit('clickedNavigation', data);
+    }
   },
 };
 </script>

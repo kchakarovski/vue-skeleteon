@@ -6,14 +6,14 @@
           <a
             v-if="value.isPage"
             class="href"
-            @click="toggleNavigationItem(value.href)"
+            @click="toggleNavigationItem(value.href, value.isPage)"
             v-text="value.name"
             v-tooltip.bottom="value.tooltip"
           />
           <button
             class="nav__item--name_test"
             v-else
-            @click="toggleButton(value.href)"
+            @click="toggleNavigationItem(value.href, value.isPage)"
             v-text="value.name"
             v-tooltip.bottom="value.tooltip"
           />
@@ -48,13 +48,9 @@ export default {
     return {};
   },
   methods: {
-    toggleNavigationItem(url) {
-      this.$emit("clickedNavigation", url);
-    },
-    toggleButton(href) {
-      this.$emit(href);
-      document.getElementById(href).scrollIntoView({ behavior: "smooth" });
-    },
+    toggleNavigationItem(url, isPage) {
+      this.$emit("clickedNavigation", {url, isPage});
+    }
   },
 };
 </script>

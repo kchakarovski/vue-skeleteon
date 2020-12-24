@@ -1,6 +1,6 @@
 <template>
-  <div class="app">
-    <app-header :navigation="navigation" />
+  <div id="app" class="app">
+    <app-header @clickedNavigation="clickedNavigation" :navigation="navigation" />
 
     <router-view />
 
@@ -12,8 +12,12 @@
 import AppHeader from "../src/components/AppHeader";
 import AppFooter from "../src/components/AppFooter";
 import { navigation } from "./static/navigation";
-import { blogData } from "./static/blog";
-import { contactData } from "./static/contact";
+import { 
+  homeData,
+  aboutData,
+  blogData,
+  contactData
+}  from './static/pages';
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -23,9 +27,10 @@ export default {
     AppFooter
   },
   mounted() {
-    this.getNavigationData();
-    this.getBlogData();
-    this.getContactData();
+    setTimeout(() => {
+      this.scrollTo('app');
+    }, 500);
+    this.getData();
   },
   computed: {
     ...mapGetters(["navigation"])
@@ -33,17 +38,29 @@ export default {
   methods: {
     ...mapActions([
       "updateNavigationData",
+      "updateHomeData",
+      "updateAboutData",
       "updateBlogData",
       "updateContactData"
     ]),
-    getNavigationData() {
+    getData() {
       this.updateNavigationData(navigation);
-    },
-    getBlogData() {
+      this.updateHomeData(homeData);
+      this.updateAboutData(aboutData);
       this.updateBlogData(blogData);
-    },
-    getContactData() {
       this.updateContactData(contactData);
+    },
+    clickedNavigation(data) {
+      if(data.isPage) {
+        this.$router.push(data.url).catch((err) => {
+          console.log(err + "error");
+        });
+      } else {
+        this.scrollTo(data.url);
+      }
+    },
+    scrollTo(section) {
+      document.getElementById(section).scrollIntoView({ behavior: "smooth" });
     }
   }
 };

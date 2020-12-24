@@ -5,6 +5,12 @@ export default {
   updateNavigation(state, data) {
     state.navigation = data;
   },
+  updateHome(state, data) {
+    state.home = data;
+  },
+  updateAbout(state, data) {
+    state.about = data;
+  },
   updateBlog(state, data) {
     state.blog = data;
   },

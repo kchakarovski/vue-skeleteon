@@ -5,6 +5,12 @@ export default {
   updateNavigationData({ commit }, payload) {
     commit("updateNavigation", payload);
   },
+  updateHomeData({ commit }, payload) {
+    commit("updateHome", payload);
+  },
+  updateAboutData({ commit }, payload) {
+    commit("updateAbout", payload);
+  },
   updateBlogData({ commit }, payload) {
     commit("updateBlog", payload);
   },

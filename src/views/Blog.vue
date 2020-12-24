@@ -1,5 +1,5 @@
 <template>
-  <div id="blog">
+  <div v-if="blogInputData" id="blog">
     <div class="">
       <span>{{ counter }}</span>
       <button @click="increameantCounter">+ 1 Like</button>
