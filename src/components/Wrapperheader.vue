@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "WrapperHeader",
+  name: "Wrapperheader",
   props: {
     inputData: {
       type: Object,
@@ -44,10 +44,10 @@ export default {
           header_img: "Some https://image.com",
           header_description: "Some Description Comp",
           header_buttonText: "About",
-          header_buttonLink: "/about"
+          header_buttonLink: "/about",
         };
-      }
-    }
+      },
+    },
   },
   data() {
     return {};
@@ -55,7 +55,7 @@ export default {
   methods: {
     toggle(url) {
       this.$emit("clickedButton", url);
-    }
-  }
+    },
+  },
 };
 </script>

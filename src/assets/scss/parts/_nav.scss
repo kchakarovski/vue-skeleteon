@@ -4,10 +4,36 @@
 
   &__item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    // flex-direction: row;
     align-items: center;
+    // flex-wrap: nowrap;
     width: 100%;
     transition: 0.7s ease-in-out;
+    &:nth-child(1){
+      order: 1; // Home
+      flex: 5;
+    }
+    &:nth-child(2){
+      order: 0; //Wrapper
+      flex: 1;
+    }
+    &:nth-child(3){
+      order: 1; //About
+      flex: 1;
+    }
+      &:nth-child(4){
+        order: 1; //Blog
+        flex: 1;
+      }
+      &:nth-child(5){
+        order: 0;  //LastCard
+        flex: 1;
+      }
+      &:nth-child(6){
+        order: 1; // Contact
+        flex: 1;
+      }
 
     &--name {
       transition: 0.7s ease-in-out;
@@ -21,9 +47,7 @@
 
       &_test {
         display: flex;
-        align-self: center;
-        position: relative;
-        right: 140px;
+        align-self: center;  // BTN :)
       }
     }
 

@@ -17,8 +17,7 @@ export const homeData = {
             header_buttonText: "Vuex Button",
             header_buttonLink: "/about"
         },
-        widgets: [
-            {
+        widgets: [{
                 title: "Titlew",
                 subtitle: "Subtitle",
                 img: "https://via.placeholder.com/200x150",
@@ -100,7 +99,8 @@ export const homeData = {
         subtitle: "Last Card // Hello from Vuex Subtitle",
         description: "Last Card // Some description from Vuex",
         img: "https://via.placeholder.com/600x400"
-    }
+    },
+    increamentBtn: "+ 👍",
 }
 
 export const aboutData = {
@@ -129,16 +129,14 @@ export const aboutData = {
             header_buttonText: "Vuex Button",
             header_buttonLink: "/about"
         },
-        widgets: [
-            {
-                title: "Lorem ipsum about",
-                subtitle: "Subtitle about",
-                img: "https://via.placeholder.com/200x150",
-                description: "Some description",
-                buttonText: "Some Text",
-                buttonLink: "/some-awesome-description"
-            }
-        ],
+        widgets: [{
+            title: "Lorem ipsum about",
+            subtitle: "Subtitle about",
+            img: "https://via.placeholder.com/200x150",
+            description: "Some description",
+            buttonText: "Some Text",
+            buttonLink: "/some-awesome-description"
+        }],
         config: {
             configItemsA: {
                 title: false,
@@ -164,7 +162,8 @@ export const aboutData = {
         subtitle: "Hello from Vuex Subtitle ( LAST About )",
         description: "Hello from Vuex Description ( LAST About )",
         img: "https://via.placeholder.com/200x200"
-    }
+    },
+    increamentBtn: "+ 👍",
 }
 
 export const blogData = {
@@ -186,16 +185,14 @@ export const blogData = {
             header_buttonText: "Vuex Button",
             header_buttonLink: "/about"
         },
-        widgets: [
-            {
-                title: "Lorem ipsum BLOG",
-                subtitle: "Subtitle BLOG",
-                img: "https://via.placeholder.com/200x150",
-                description: "Some BLOG",
-                buttonText: "Some Text",
-                buttonLink: "/some-awesome-description"
-            }
-        ],
+        widgets: [{
+            title: "Lorem ipsum BLOG",
+            subtitle: "Subtitle BLOG",
+            img: "https://via.placeholder.com/200x150",
+            description: "Some BLOG",
+            buttonText: "Some Text",
+            buttonLink: "/some-awesome-description"
+        }],
         config: {
             configItemsA: {
                 title: false,
@@ -221,7 +218,8 @@ export const blogData = {
         subtitle: "Hello from Vuex Subtitle ( LAST BLOG )",
         description: "Hello from Vuex Description ( LAST BLOG )",
         img: "https://via.placeholder.com/200x200"
-    }
+    },
+    increameantBtn: "+ 👍",
 };
 
 export const contactData = {
