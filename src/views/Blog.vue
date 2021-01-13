@@ -1,8 +1,8 @@
 <template>
   <div v-if="blogInputData" id="blog">
-    <div class="">
+    <div>
       <span>{{ counter }}</span>
-      <button @click="increameantCounter">+ 1 Like</button>
+      <button class="counterbtn" @click="increameantCounter">{{blogInputData.increameantBtn}}</button>
     </div>
     <topcard :inputData="blogInputData.topCard" />
     <wrapper
@@ -25,16 +25,16 @@ export default {
   components: {
     Topcard,
     Lastcard,
-    Wrapper
+    Wrapper,
   },
   computed: {
-    ...mapGetters(["blogInputData", "counter"])
+    ...mapGetters(["blogInputData", "counter"]),
   },
   methods: {
     ...mapActions(["increameantCounter"]),
     navigate(url) {
       this.$router.push(url);
-    }
-  }
+    },
+  },
 };
 </script>

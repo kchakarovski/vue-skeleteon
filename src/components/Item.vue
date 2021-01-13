@@ -37,7 +37,7 @@ export default {
   name: "Item",
   data() {
     return {
-      hide: true
+      hide: true,
     };
   },
   props: {
@@ -50,9 +50,9 @@ export default {
           description: "<p>Some awesome paragraph</p>",
           buttonLink: "/about",
           buttonText: "Read more",
-          img: "https://via.placeholder.com/1300x700"
+          img: "https://via.placeholder.com/1300x700",
         };
-      }
+      },
     },
     config: {
       type: Object,
@@ -63,15 +63,15 @@ export default {
           description: true,
           buttonLink: true,
           buttonText: true,
-          img: true
+          img: true,
         };
-      }
-    }
+      },
+    },
   },
   methods: {
     toggle(url) {
       this.$emit("clickedButton", url);
-    }
-  }
+    },
+  },
 };
 </script>

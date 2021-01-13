@@ -2,7 +2,7 @@
   <div v-if="aboutInputData" id="about">
     <div class="">
       <span>{{ counter }}</span>
-      <button @click="increameantCounter">+ 1 Like</button>
+      <button class="counterbtn" @click="increameantCounter">{{aboutInputData.increamentBtn}}</button>
     </div>
     <topcard :inputData="aboutInputData.topCard" />
     <wrapper
